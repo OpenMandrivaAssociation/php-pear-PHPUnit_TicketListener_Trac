@@ -3,7 +3,7 @@
 Summary:	A ticket listener for PHPUnit that interacts with the Trac issue API
 Name:		php-pear-%{upstream_name}
 Version:	1.0.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		Development/PHP
 URL:		http://www.phpunit.de/
