@@ -3,7 +3,7 @@
 Summary:	A ticket listener for PHPUnit that interacts with the Trac issue API
 Name:		php-pear-%{upstream_name}
 Version:	1.0.0
-Release:	%mkrel 3
+Release:	%mkrel 1
 License:	BSD
 Group:		Development/PHP
 URL:		http://www.phpunit.de/
@@ -60,7 +60,7 @@ pear install --nodeps --soft --force --register-only \
 %if %mdkversion < 201000
 if [ "$1" -eq "0" ]; then
     pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
+        %{pear_name} >/dev/null || :
 fi
 %endif
 
@@ -71,3 +71,13 @@ fi
 %{_datadir}/pear/PHPUnit/Extensions/TicketListener/Trac.php
 %{_datadir}/pear/packages/PHPUnit_TicketListener_Trac.xml
 
+
+
+%changelog
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1mdv2012.0
++ Revision: 730903
+- import php-pear-PHPUnit_TicketListener_Trac
+
+
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1mdv2010.2
+- initial Mandriva package
